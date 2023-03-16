@@ -75,3 +75,75 @@ INSERT INTO students VALUES(104, 'Halide E. Adivar', 'İzmir', 473, 'Psychology'
 INSERT INTO students VALUES(105, 'Nazan Bekir', 'İzmir', 432, 'Literature');
 INSERT INTO students VALUES(106, 'Peyami Safa', 'Antalya', 535, 'Comp.Eng.');
 INSERT INTO students VALUES(107, 'Sabahattin Ali', 'İstanbul', 492, 'Mathematics');
+
+
+//
+CREATE TABLE developers(
+id SERIAL PRIMARY KEY,
+name varchar(50),
+salary real,
+prog_lang varchar(20)
+);
+
+INSERT INTO developers(name,salary,prog_lang) VALUES('Akın',4000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Ebubekir',5000,'JavaScript');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Bilal',5000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Gülsüm',4000,'JavaScript');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Fatih',6000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Cemil',6000,'Html');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Adam',5500,'Css');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Ufuk',5000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Mürsel',4500,'Html');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Ahmet',4500,'Css');
+INSERT INTO developers(name,salary,prog_lang) VALUES('İrfan',7000,'C++');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Victor',4000,'C#');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Zişan',4000,'C#');
+----------- department table -------
+CREATE TABLE departments
+(
+  dept_id int,
+  department varchar(20),
+  pass_grade int,
+  campus varchar(20)
+);
+
+INSERT INTO departments VALUES(5001, 'Comp.Eng.', 521,'North');
+INSERT INTO departments VALUES(5002, 'Mathematics', 455,'South');
+INSERT INTO departments VALUES(5003, 'Psychology', 440,'Hisar');
+INSERT INTO departments VALUES(5004, 'Management', 465,'Hisar');
+INSERT INTO departments VALUES(5005, 'Literature', 420,'North');
+
+CREATE TABLE developers(
+id SERIAL PRIMARY KEY,
+name varchar(50),
+salary real,
+prog_lang varchar(20)
+);
+
+INSERT INTO developers(name,salary,prog_lang) VALUES('Akın',4000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Ebubekir',5000,'JavaScript');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Bilal',5000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Gülsüm',4000,'JavaScript');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Fatih',6000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Cemil',6000,'Html');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Adam',5500,'Css');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Ufuk',5000,'Java');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Mürsel',4500,'Html');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Ahmet',4500,'Css');
+INSERT INTO developers(name,salary,prog_lang) VALUES('İrfan',7000,'C++');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Victor',4000,'C#');
+INSERT INTO developers(name,salary,prog_lang) VALUES('Zişan',4000,'C#');
+
+CREATE TABLE departments
+(
+  dept_id int,
+  department varchar(20),
+  pass_grade int,
+  campus varchar(20)
+);
+
+INSERT INTO departments VALUES(5001, 'Comp.Eng.', 521,'North');
+INSERT INTO departments VALUES(5002, 'Mathematics', 455,'South');
+INSERT INTO departments VALUES(5003, 'Psychology', 440,'Hisar');
+INSERT INTO departments VALUES(5004, 'Management', 465,'Hisar');
+INSERT INTO departments VALUES(5005, 'Literature', 420,'North');

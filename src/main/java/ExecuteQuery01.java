@@ -4,7 +4,8 @@ public class ExecuteQuery01 {
 
     public static void main(String[] args) throws SQLException {
         // after jDBC 4.0 or after JDK 7 no need to use Class.ForName() in side of your class.
-        Connection con= DriverManager.getConnection("jdbc:postgresql://localhost:5432/dev_paractice","dev_user","dev_pass");
+        Connection con= DriverManager.getConnection("jdbc:postgresql://localhost:5432/dev_paractice",
+                "dev_user","dev_pass");
         // 3  create a statements // to execute Sql query
         Statement stmnt=  con.createStatement();
 
@@ -25,7 +26,7 @@ public class ExecuteQuery01 {
         // / whose phone code is greater than 600
         System.out.println("======================Task -2 ===================");
 
-        String query2= "SELECT phone_code, country_name FROM countries WHERE phone_code < 600";
+        String query2= "SELECT phone_code, country_name FROM countries WHERE phone_code > 600";
 
         ResultSet resultSet2=  stmnt.executeQuery(query2);
         while (resultSet2.next()){
@@ -34,7 +35,7 @@ public class ExecuteQuery01 {
         }
 
 
-        //TASK - 3 : Display students' name and grade  grades are higher than passing grade of studnets ..
+        //TASK - 3 : Display students' name and grade  grades are higher than  grade of students ..
         System.out.println("--------------------- Task-3 ");
 
         String query3= "SELECT name, grade FROM students WHERE grade > (SELECT AVG(grade) FROM students)";
@@ -43,6 +44,21 @@ public class ExecuteQuery01 {
             System.out.println(resultSet3.getString("name")+"----"+resultSet3.getInt("grade"));
         }
         /// continue from  here !!!!!!!
+        //TASK-4. Get all information about the developers whose salary is lowest
+
+        System.out.println("--------------------- Task-4 ");
+        String query4= "SELECT * FROM developers WHERE salary =(SELECT min(salary) FROM developers)";
+        ResultSet rs4 = stmnt.executeQuery(query4);
+        while (rs4.next()){
+            System.out.println(rs4.getInt("id")+"---"+rs4.getString("name")+
+                    "---"+rs4.getDouble("salary")+"--"+rs4.getString("prog_lang"));
+        }
+
+
+
+
+
+
 
         stmnt.close();
         con.close();

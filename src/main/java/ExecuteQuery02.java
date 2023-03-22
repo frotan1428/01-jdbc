@@ -45,11 +45,6 @@ public class ExecuteQuery02 {
 
          stmnt.close();
          con.close();
-
-
-
-
-
-
+         
     }
 }
